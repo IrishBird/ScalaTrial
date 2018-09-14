@@ -15,6 +15,13 @@ object scalaType {
     str2  
  }
  
+  def upperCaseAnimalString(str1:Animal*)={
+   
+   var str2=str1.map(_.name.toUpperCase())
+    str2  
+ }
+  
+  
  def handleListAniaml(listAnimal:Animal*)={
    val ListAnimalName= for (animal <- listAnimal)
      yield animal.name.toUpperCase()
@@ -67,7 +74,9 @@ def main(arg: Array[String]) {
   
   val nameList=handleListAniaml2(listBufferItem.values.toArray:_*)
   
-  nameList.foreach(println)
+//  nameList.foreach(println)
+  val namelist2=upperCaseAnimalString(listBufferItem.values.toArray:_*)
+  namelist2.foreach(println)
   
  
 
